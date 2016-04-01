@@ -4,6 +4,8 @@ Mitchell under the alias "Kerm Martian", with help from countless programmers,
 beta-testers, and users on Cemetech and elsewhere. It has been open-sourced
 under the following license as a learning tool to other programmers.
 
+More info: http://dcs.cemetech.net
+
 +---------------------------------------------------+
 |        Doors CS 7 Source Code License             |
 |        ==============================             |
@@ -18,9 +20,9 @@ Redistribution and use in source and binary forms, with or without modification,
 are permitted under the following conditions:
 1. Redistributions of a substantial percentage of the source code (defined as 400
    or more lines of the original source) or that source code in binary form require
-   express written permission from <OWNER>, and must reproduce the above copyright
-   notice, this list of conditions and the following disclaimer in the
-   documentation and/or other materials provided with the distribution.
+   express written permission from Christopher Mitchell, and must reproduce the
+   above copyright notice, this list of conditions and the following disclaimer in
+   the documentation and/or other materials provided with the distribution.
 2. Redistributions of fewer than 400 lines of source must attribute the original
    project by name and author in source and (if applicable) in documentation, but
    may be redistributed under any BSD 3-clause-compatible, GPL-compatible, or All
