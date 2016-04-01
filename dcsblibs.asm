@@ -2220,6 +2220,8 @@ DisableCn2:
 	ld a,0
 	out (08h),a               ; Reenable link assist disable intterupts
 	bcall($4C87)              ; Enable Apd again
+        ld hl,0
+        ld (Cn2_Hook_Pre),hl      ;Clear PreHook (init doesnt do this why not?)
 	ei    
 	jp xLibEndNoOut
 
