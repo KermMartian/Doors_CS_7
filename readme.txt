@@ -1,3 +1,9 @@
+Doors CS 7 is a shell for the monochrome TI-83 Plus and TI-84 Plus families of
+graphing calculators. It was developed between 2001 and 2016 by Christopher
+Mitchell under the alias "Kerm Martian", with help from countless programmers,
+beta-testers, and users on Cemetech and elsewhere. It has been open-sourced
+under the following license as a learning tool to other programmers.
+
 +---------------------------------------------------+
 |        Doors CS 7 Source Code License             |
 |        ==============================             |
