@@ -1,0 +1,109 @@
+French
+_______
+Invalid Filetype : type de fichier invalide
+Missing Library : librairie manquante
+File Not Found : fichier non trouvé
+Not Enough Mem : mémoire insuffisante
+Empty Desktop : bureau vide
+Archive Error : erreur d'archive
+BASIC Exec Error : erreur d'exécution BASIC
+Help and credits: aide et crédits
+Your calc crashed or reset : votre calculatrice a crashé
+Preferences restored : préférences restaurées
+Press [ENTER] : appuyez sur [enter]
+Error # : erreur
+Link : lien
+Display : affichage
+Options: options
+About : à propos
+Power : puissance
+Shutdown
+Restart : recommencer
+Actions : actions
+Quit Doors CS : quitter Doors CS
+Light < Contrast > Dark : lumineux < contraste > sombre
+Use safe driver
+OK
+Cancel : annuler
+Accelerate : accélerer
+Enable gCn and Cn2 : activer gCn et Cn2
+Launch DCS at startup : lancer DCS au démarrage
+Enable background : activer le fond
+Edit cursor : éditer le curseur
+Default : défaut
+Open File : Ouvrir fichier
+Save File As... : sauvegarder le fichier sous
+Backing up... : sauvegarde....
+
+German
+Unzulässiges Filetype
+Fehlende Bibliothek
+Akte nicht gefunden
+Nicht genügend Gedächtnis
+Leerer Schreibtisch
+Archiv-Störung
+BASIC Durchführung Störung
+Hilfe und Gutschriften
+Dein Rechner zerschmettert oder Zurückstellen
+Präferenzen wieder hergestellt
+Betätigen [ENTER]
+Störung #
+Verbindung
+Anzeige
+Wahlen
+Beschreibung
+Energie
+Abschaltung
+Wiederanlauf
+Tätigkeiten
+Turen RS beendiggen
+Licht < Kontrast > Dunkelheit
+Sicheren Treiber benutzen
+OK
+Löschen
+Beschleunigen
+gRn und Rn2 ermöglichen
+TRS am Start beginnen
+Hintergrund ermöglichen
+Zeiger redigieren
+Rückstellung
+Akte öffnen
+Außer Akte wie/ Außer Akte
+Einsparungpräferenzen
+
+Spanish
+--------------
+Filetype inválido.
+Biblioteca que falta.
+Archivo no encontrado.
+No bastante memoria.
+Tablero del escritorio vacío.
+Error del archivo.
+Error de la ejecución del BASIC.
+Ayuda y créditos.
+Tu calculadora estrellada o reajuste.
+Las preferencias restauraron.
+Prensa [ENTER].
+Error #.
+Acoplamiento.
+Exhibición.
+Opciones.
+Sobre.
+Energía.
+Parada.
+Recomenzar.
+Acciones.
+Parar el CS de las puertas.
+Utilizar el conductor seguro.
+Encender la obscuridad del < contraste >.
+AUTORIZACIÓN.
+Cancelación.
+Acelerar.
+Permitir el gCn y Cn2.
+Lanzar DCS en el arranque.
+Permitir el fondo.
+Corregir el cursor.
+Defecto.
+Abrir el archivo.
+Excepto archivo como.
+El sostener.

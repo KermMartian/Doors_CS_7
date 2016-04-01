@@ -1,0 +1,137 @@
+Doors CS 6: TO DO
+_________________
+-----------------
+
+-----------------------For 6.x.x----------------
+-[ ] RunProg entry point
+-[ ] GUIfy deaktop routines
+-[ ] Drag and drop multiple files to a folder
+-[ ] Or drag and drop at all, in fact
+-[ ] Goto location (ex, /Games/MyGame) [Good idea.  Maybe a 6.x feature.]
+-[ ] Search for file [Good idea.  Maybe a 6.x feature.]
+
+-----------------------Done----------------
+[=] Cn2/Start menu whitespace issue
+[=] basic editor Goto
+[=] Program resend necessary for ASM programs?? no.
+[=] iFastCopy di/ei - resolved for all Ion libs on page 0 and page 1 (3/15/07)
+[=] Distortion: known problem; I'm working on it. (3/15/07)
+[=] Scroll misalign on FOpen and FSaveAs (3/15/07)
+[=] Filename entry debounce (3/14/07)
+[X] Archive crash (low batt) for appvar backup [NONREPLICABLE]
+[=] GUIMouse [off] retriggering problem (3/14/07)
+[=] CEdit debounce problems (3/14/07)
+[=] Elfprince's double-rendering bug (3/14/07)
+[=] Demon's archive problem (3/14/07)
+[=] PG_NMR writeback integrity (3/14/07)
+[=] Cn2 crash on real calcs (3/8/07)
+[=] GUI Insufficient RAM invokes err handler, not internal handler --> VAT corruption problem (3/7/07)
+[=] Sort iteration (3/7/07) - OP1 wasn't getting re-set when a new top prog was found
+[=] Homescreen retention dealio (3/7/07)
+[=] Hidden file junk (3/7/07)
+[=] Alpha sorting (Tari) -+- -[-d-i-s-p-l-a-y-]- -o-p-t-i-o-n- (3/6/07)
+[=] Speed issue (3/6/07)
+[=] GUIfy the Archiving... junk (3/6/07)
+[=] complete Cn2 support (2/16/07)
+[=] Text input exit debounce problem (2/16/07)
+[=] Final findlineend problem?! (2/16/07)
+[=] cn2 ready2send flag (2/15/07)
+[=] Foamy's cursor/crash error - Cn2?? - assumed fixed from Cn2 crash/DCS init problem. (2/14/07)
+[=] New Cn2 crash from DCS Menu (2/14/07)
+-[=] hotkey definitions for GUIMouse (2/14/07)
+[=] Icon OBOE fixed for archived icons (2/13/07)
+[=] Routines for the following (2/12/07)
+[=] GUISMultilineType
+	[=] FindLineEnd OBOE
+		[=] Misalignment - occurs on PageUp
+		[=] Carriage return
+	[=] Textinr_cursor_down
+	[=] CR for FindLineEnd
+[=] finish text input routines for the GUI
+[=] Defragmenting.... problem (Swivel) (2/7/07)
+[=] Instant crash on mouse clicking (2/7/07)
+[=] mouse hotkey (2/7/07)
+[=] Rendering double CR (2/7/07)
+[=] Made the Link screen work under multilingual profiles
+[=] Do something with the Link screen
+[=] Fixed manual and automatic powerdown/up issues with Cn2 and gCn. (11/24/06)
+[=] Binaricized in/out count icon for all langs (11/22/06)
+[=] Added counting of Cn2 rec/send bytes, reset on reenable (11/22/06)
+[=] Switched the safe driver checkbox to alpha sort, allocated AV space
+[=] Harq(?)'s [on] problem resolution
+[=] reenable silent link for BASIC and ASM programs - TI im1
+[=] Lowercase flag disable
+[=] Residual error with the [A/a/1] indicator from forgetting to reset the flag at first.
+[=] the multilingual thing: I'm thinking of just making multilingual versions...
+[=] MOS unsupported quit to DCS
+[=] Extra +2 offset in FileSaveAs
+[=] GUIStack pops for FileOpen and FileSaveAs
+[=] Return values for FileSaveAs
+[=] Removed delay on close entirely, added message during appvar backup
+[=] DCSMenu delay on menu close - backup appvar??
+[=] Fix enable Cn2 dcsMenu crash
+[=] Alpha indicator
+[=] Alpha/2nd still not debounced on close
+[=] FileOpen archived handling:
+	[X] filename
+	[=] unarchive file if chosen - now nongo on archived file click - now wrong pointers on finish
+[=] unknown type problem with APs - now known to be a name length issue.  Also occurs when APMain NL is small.
+[=] FileSaveAs scrollbar problem
+[=] AP open & save as routines & GUls
+[=] FileSaveAs
+[=] Rename hotspot misalignment in properties menu fixed
+[=] FileOpen
+[=] FileSave
+-[=] Crash detection
+[=] Appvar backup and restore.
+[=] I plan to add a intro screen that shows the first time you install DCS.
+[=] You need to add the version/beta number somewhere in the about screen, since I have 5 copies of DCS betas on my machine...
+[=] Debounce issue
+[=] Masked battery and memory meter
+[=] Alpha added as GUIMouse rightclick key alias
+[=] Desktop flicker on redraw removed
+[=] make the scrollbar use the GUIRScrollVert routine
+[=] better contrast - increment by two
+[=] Dynamic acceleration in GUImouse
+[=] Dynamic acceleration in regular mouse
+[=] Dynamic acceleration in options menu
+[=] Fix contrast issue
+[=] restore the ti-os when turning off via Off
+[=] Cn2 disable routine
+[=] Vector out Cn2 clearsend and clearrec buf routines
+[=] Vector out Cn2 disable routine
+[?] AP correction offset - perhaps make automatic?
+[=] Force load option
+[=] Add the wait-for-readyclock in the Cn2 Receive Frame routine
+[=] disable interrupt and switch back to TI-OS int if running anything other than a DCS 6 asm program
+[=] restore the ti-os when exiting DCS
+[X] Find RAM to put 256 bytes of int table and 600 bytes of interrupt
+[=] im2 disability at mouse
+[=] Mem checks in Temp load routines
+[=] Fix crashing MOS program issue -> suspect ion routines somehow -> find out what routine is being used in Invaded
+[=] add the insertbyte routine
+[=] add the deletebyte routine
+[=] GUISWinButtonClose		
+[=] GUISWinButtonMinimize	
+[=] GUISWinButtonMaximize	
+[=] GUISWinButtonRestore		
+[=] GUISTextLineInClick		
+[=] GUISTextLineInType		
+[=] GUISRadioClick			
+[=] GUISCheckClick			
+[=] GUISByteInc				
+[=] GUISByteDec				
+[=] GUISWordInc				
+[=] GUISWordDec				
+[=] GUISMultilineClick		
+[=] GUISPassClick			
+[=] GUISPassType			
+[=] GUISScrollVertUp		
+[=] GUISScrollVertDown		
+[=] GUISScrollHorizUp		
+[=] GUISScrollHorizDown		
+[=] EnoughRAM check for PushGUIStack
+[=] Fix powerdown variables for GUI Mouse
+[=] Bounce fix for text input completion (09/28)
+[=] Organize the DCS variable safeRAM to maximize space for programs
+[=] SEs

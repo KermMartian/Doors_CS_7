@@ -1,0 +1,8 @@
+At				Length		End		Usage
+----------------------------------------------------
+$9872			129			$98F3	Main variables
+$98F3			166			$9999	--Free--
+$9999			30			$99B7	Interrupt vector
+$99B7			73			$9A00	--Free--
+$9A00			256			$9B00	Interrupt jumps
+$9B00			114			$9B72	--Free--
