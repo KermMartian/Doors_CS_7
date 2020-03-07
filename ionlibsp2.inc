@@ -221,105 +221,67 @@ immGetPixelLoop:
 	ret
 
 ;-----> Copy the gbuf to the screen, guaranteed 
-;Courtesy of Jim E.
+;Courtesy of Runer112/Axe.
 ;Input: nothing
 ;Output:graph buffer is copied to the screen, no matter the speed settings
-;
-;in f,(c) is an unofficial instruction.
-;It must be noted that you cannot specify any other register. Only f works.
-;You may have to add it in order for the routine to work.
-
- .addinstr IN	F,(C)	70ED	2	NOP	1
-
 immFastCopy:
-	call iCheckInts2
-	push af
-		di
-		ld c,$10
-
-		xor a
-		ld r,a
-		ld a,r
-		cp 2						;Nspire check
-		jr nz,immFastCopyNspire
-		bit 3,(iy+41h)				;PresentationLink
-		jr nz,immFastCopyNspire
-mmsetrow:
-		in a,(c)
-		rla ;test 7th bit
-		jr c,mmsetrow
-		ld a,$80
-		out ($10),a
-		ld hl,gbuf
-		ld de,12
-		ld a,$20
-mmcol:
-		push af ;the push and pop are wasted clocks
-mmcolwait: ;but this only occurs 12 times
-		in a,(c)
-		rla
-		jr c,mmcolwait
-		pop af
-		out ($10),a
-		push af
-		ld b,64
-mmrow:
-		in a,(c)
-		rla
-		jr c,mmrow
-		ld a,(hl)
-		out ($11),a
-		add hl,de
-		djnz mmrow
-		pop af
-		dec h
-		dec h
-		dec h
-		inc hl
-		inc a
-		cp $2c
-		jr nz,mmcol
-immFastCopyAllFinish:
-		pop af
-	ret po
-;#ifdef enablecn2eis
+	ld	hl,gbuf
+	ld	a,$80
+	out	($10),a
+	call	mmSafety
+	push	af
+	ld	a,$1F
+__immFastCopyAgain:
+	inc	a
+	out	($10),a		;many cc into, 72cc loop
+	cp	$2B
+	ld	bc,(64<<9)+$11
+	push	hl
+	inc	de		;waste
+__immFastCopyLoop:
+	push	af		;semi waste
+	ld	de,11
+	outi			;71cc into, 71cc loop
+	add	hl,de
+	pop	af		;semi waste
+	djnz	__immFastCopyLoop
+	pop	hl
+	inc	hl
+	jr	c,__immFastCopyAgain
+__immFastCopyRestore:
+	pop	af
+	out	($20),a
+	ret	c
 	ei
-;#endif
 	ret
-immFastCopyNspire:
-mmsetrowNspire:
-		call lcd_busy_quick
-		ld a,$80
-		out ($10),a
-		ld hl,gbuf
-		ld de,12
-		ld a,$20
-mmcolNspire:
-		call lcd_busy_quick
-		out ($10),a
-		push af
-			ld b,64
-mmrowNspire:
-			call lcd_busy_quick
-			ld a,(hl)
-			out ($11),a
-			add hl,de
-			djnz mmrowNspire
-		pop af
-		dec h
-		dec h
-		dec h
-		inc hl
-		inc a
-		cp $2c
-		jr nz,mmcolNspire
-		jr immFastCopyAllFinish
 
-; Critical timings:
-;	command->command: 65
-;	command->value  : 68
-;	value  ->value  : 66
-;	value  ->command: 67
+;Safety stuff (Stupid TI/z80!)
+mmSafety:			;Output: af holds state to-be-pushed
+				;DESTROYS B, all other registers okay.
+	in	a,($02)		;Save model settings
+	rla			;BE flag into carry
+	sbc	a,a		;00 if BE else FF
+	jr	z,__mmSafetyBE	;Check If model is base edition
+	in	a,($20)		;Get current speed setting
+__mmSafetyBE:
+	ld	b,a		;Save speed setting
+	xor	a		;Set nc (interrupts)
+	out	($20),a		;Set speed to slow
+mmSafetyIntOnly:
+	push	af		;Check interrupts
+	pop	af
+	ld	a,i		;pe if interrupt
+	di
+	ld	a,b		;Restore speed setting
+	ret	pe		;Return if interrupts on
+	dec	sp		;Otherwise, robust test
+	dec	sp
+	pop	af
+	or	a		;Set nc (interrupts)
+	ld	a,b
+	ret	nz		;Return if interrupts on
+	scf			;Set c (no interrupts)
+	ret			;Return
 
 ;-----> iDetect a file
 ; input:
