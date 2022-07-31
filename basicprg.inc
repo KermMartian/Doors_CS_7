@@ -85,15 +85,18 @@ NoHookToSave3:
 	ld de,AVOff_XLC3Libs
 	ld hl,(AppVarLoc)
 	add hl,de
+	in a,(6) \ dec a \ dec a						;WE ARE ON PAGE 0.  HOOK IS ON PAGE 2.
+	ld d,a
 	ld a,(hl)
 	or a
 	jr z,NoXLibCelticIIIHook
 	ld hl,BASICParserHook
+	ld a,d
 	bcall(_EnableParserHook)
 	jr XLibCelticIIIHookFinish
 #endif
 NoXLibCelticIIIHook:
-	in a,(6) \ dec a \ dec a						;WE ARE ON PAGE 0.  HOOK IS ON PAGE 2.
+	ld a,d
 	ld hl,BASICParserHookSimple
 	bcall(_EnableParserHook)						;Simple hook just catches Stop
 XLibCelticIIIHookFinish:
