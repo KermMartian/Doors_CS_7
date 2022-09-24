@@ -10,8 +10,6 @@
 ;to the terms of the agreement.
 ;-----------------------------------------------------------
 
-SMAboutTxt3:
-	.db "(c)2001-13 Cemetech     6.3.0",0
 InfoPopSize:
 	.db "Size: ",0
 InfoPopSize2:
@@ -324,6 +322,8 @@ GotoErrL2:
 ;	.db "Help and credits:",0
 ;SMAboutTxt2:
 ;	.db "http://dcs.cemetech.net",0
+;SMAboutTxt3:
+;	.db "(c)2001-13 Cemetech     6.3.0",0
 CrashTxt1:
 	.db "Your calc crashed or reset.",0
 CrashTxt2:

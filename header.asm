@@ -15,7 +15,7 @@
 ;|             BUILD FLAGS            |
 ;+====================================+
 
-;versionNum .equ	"7.3"
+;versionNum .equ	"7.4"
 ;===Build Flags for CALCnet2===
 #define enableCn22
 ;#define enablecn2eis
